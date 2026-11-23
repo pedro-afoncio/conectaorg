@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel da Defesa Civil | ConectaONG</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body data-perfil="defesacivil">
+  <header class="cabecalho">
+    <div class="container">
+      <a href="defesa-painel.html" class="logo"><img src="img/logo.png"
+          alt="Mão segurando um coração, símbolo do ConectaONG">ConectaONG</a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="defesa-painel.html" class="ativo">Situação Regional</a>
+        <a href="defesa-campanha.html">Campanhas de Emergência</a>
+        <a href="defesa-alertas.html">Alertas de Risco</a>
+        <a href="index.html" id="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="titulo-pagina">Painel de Monitoramento e Situação Regional</h1>
+      <p class="subtitulo-secao">Coordenação emergencial da Defesa Civil e resposta rápida a desastres e calamidades.
+      </p>
+
+      <section class="numeros" aria-label="Indicadores da Defesa Civil">
+        <div class="numero"><span>Regiões em alerta</span><strong>4</strong></div>
+        <div class="numero"><span>Campanhas ativas</span><strong>3</strong></div>
+        <div class="numero"><span>Famílias assistidas</span><strong>6.370</strong></div>
+        <div class="numero"><span>Itens distribuídos</span><strong>12.010</strong></div>
+      </section>
+
+      <section class="secao-media">
+        <div class="cabeca-secao">
+          <h2>Quadro de Situação por Região</h2>
+          <a href="defesa-alertas.html" class="botao botao-secundario botao-pequeno">Gerenciar alertas</a>
+        </div>
+        <div class="tabela-responsiva">
+          <table class="tabela-dados" aria-label="Situação por Região">
+            <thead>
+              <tr>
+                <th>Região / Estado</th>
+                <th>Desastre / Evento</th>
+                <th>Nível de Risco</th>
+                <th>Famílias Afetadas</th>
+                <th>Ação Imediata</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-situacao-corpo">
+              <tr>
+                <td><strong>Vale do Taquari, RS</strong></td>
+                <td>Enchente e Inundações</td>
+                <td><span class="selo selo-vermelho">Alerta Máximo</span></td>
+                <td>1.800</td>
+                <td>Abertura de abrigos e envio de botes</td>
+                <td><span class="selo selo-alta">Em resposta</span></td>
+              </tr>
+              <tr>
+                <td><strong>Litoral Norte, SP</strong></td>
+                <td>Deslizamento de Encostas</td>
+                <td><span class="selo selo-vermelho">Alerta Máximo</span></td>
+                <td>950</td>
+                <td>Evacuação de encostas e acolhimento</td>
+                <td><span class="selo selo-alta">Em resposta</span></td>
+              </tr>
+              <tr>
+                <td><strong>Semiárido, BA</strong></td>
+                <td>Seca e Estiagem Severa</td>
+                <td><span class="selo selo-laranja">Alerta Alto</span></td>
+                <td>3.200</td>
+                <td>Caminhões-pipa e cestas de emergência</td>
+                <td><span class="selo selo-media">Ativo</span></td>
+              </tr>
+              <tr>
+                <td><strong>Pantanal, MS</strong></td>
+                <td>Incêndio Florestal</td>
+                <td><span class="selo selo-laranja">Alerta Alto</span></td>
+                <td>420</td>
+                <td>Combate aéreo e kits de proteção</td>
+                <td><span class="selo selo-media">Monitorando</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="secao-media">
+        <div class="cabeca-secao">
+          <h2>Campanhas Emergenciais Ativas</h2>
+          <a href="defesa-campanha.html" class="botao botao-pequeno">Abrir nova campanha</a>
+        </div>
+        <div class="grade" id="lista-campanhas-defesa"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/acesso.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/defesa.js"></script>
+</body>
+
+</html>

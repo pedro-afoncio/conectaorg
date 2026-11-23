@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acompanhamento e Confirmação de Doações | ConectaONG</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body data-perfil="entidade">
+  <header class="cabecalho">
+    <div class="container">
+      <a href="ong-painel.html" class="logo"><img src="img/logo.png"
+          alt="Mão segurando um coração, símbolo do ConectaONG">ConectaONG</a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="ong-painel.html">Início</a>
+        <a href="ong-doacoes.html" class="ativo">Doações</a>
+        <a href="ong-painel.html#perfil-ong">Minha Conta</a>
+        <a href="index.html" id="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="titulo-pagina">Painel da ONG - Gestão de Doações</h1>
+      <section class="secao-media">
+        <h2>Notificações recentes de doações</h2>
+        <div class="lista">
+          <article class="linha">
+            <div class="linha-info">
+              <h3>Novo registro de doação para triagem!</h3>
+              <p>Doador: João Silva · Itens: Alimentos não perecíveis (15 kg), Cobertores (3 un) · 20/10/2026</p>
+            </div>
+            <div class="linha-acoes">
+              <span class="selo selo-pendente">Aguardando entrega</span>
+            </div>
+          </article>
+          <article class="linha">
+            <div class="linha-info">
+              <h3>Doação entregue e concluída</h3>
+              <p>Doador: Pedro Souza · Itens: Materiais escolares (20 kits) · 18/10/2026</p>
+            </div>
+            <div class="linha-acoes">
+              <span class="selo selo-concluida">Confirmada</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao-media">
+        <h2>Filtros de doações</h2>
+        <form class="painel-cinza filtros" onsubmit="event.preventDefault();">
+          <div class="campo">
+            <label for="filtro-produto">Produto ou item</label>
+            <input type="text" id="filtro-produto" placeholder="Ex.: alimentos, agasalhos">
+          </div>
+          <div class="campo">
+            <label for="filtro-status">Status de recebimento</label>
+            <select id="filtro-status">
+              <option value="Todos">Todos os status</option>
+              <option value="Pendente">Pendente de entrega</option>
+              <option value="Recebida">Recebida pela ONG / Concluída</option>
+            </select>
+          </div>
+          <button type="button" class="botao botao-pequeno" id="botao-aplicar-filtros-ong">Aplicar filtros</button>
+        </form>
+      </section>
+
+      <section class="secao-media">
+        <h2>Confirmação e Acompanhamento de Recebimento</h2>
+        <p class="subtitulo-secao">Confirme o recebimento dos itens entregues para atualizar o painel do doador.</p>
+        <div class="lista" id="lista-acompanhamento-ong"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/acesso.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/ong-doacoes.js"></script>
+</body>
+
+</html>

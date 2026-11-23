@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abertura de Campanha Emergencial | Defesa Civil</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body data-perfil="defesacivil">
+  <header class="cabecalho">
+    <div class="container">
+      <a href="defesa-painel.html" class="logo"><img src="img/logo.png"
+          alt="Mão segurando um coração, símbolo do ConectaONG">ConectaONG</a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="defesa-painel.html">Situação Regional</a>
+        <a href="defesa-campanha.html" class="ativo">Campanhas de Emergência</a>
+        <a href="defesa-alertas.html">Alertas de Risco</a>
+        <a href="index.html" id="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container coluna-campanha">
+      <h1 class="titulo-pagina">Abertura de Campanha Emergencial</h1>
+      <p class="subtitulo-secao">Cadastre uma nova campanha de calamidade pública para mobilizar doações imediatas da
+        população.</p>
+
+      <form id="formulario-campanha-defesa" class="cartao">
+        <div class="campo">
+          <label for="titulo-defesa">Título da campanha emergencial</label>
+          <input type="text" id="titulo-defesa" placeholder="Ex.: SOS Enchentes Vale do Taquari" required>
+        </div>
+
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="tipo-desastre">Tipo de desastre ambiental</label>
+            <select id="tipo-desastre" required>
+              <option value="Enchentes e Inundações">Enchentes e Inundações</option>
+              <option value="Deslizamento de Encostas">Deslizamento de Encostas</option>
+              <option value="Seca e Estiagem Severa">Seca e Estiagem Severa</option>
+              <option value="Incêndio Florestal">Incêndio Florestal</option>
+              <option value="Calamidade Pública Geral">Calamidade Pública Geral</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="regiao-afetada">Região / Município afetado</label>
+            <input type="text" id="regiao-afetada" placeholder="Ex.: Vale do Taquari, RS" required>
+          </div>
+        </div>
+
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="urgencia-defesa">Nível de gravidade</label>
+            <select id="urgencia-defesa" required>
+              <option value="alta">Alerta Máximo / Urgência Alta</option>
+              <option value="media">Alerta Alto / Urgência Média</option>
+              <option value="baixa">Atenção / Urgência Moderada</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="meta-arrecadacao">Meta de arrecadação</label>
+            <input type="text" id="meta-arrecadacao" placeholder="Ex.: 5.000 fardos de água e cestas" required>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="descricao-defesa">Descrição da situação e necessidades imediatas</label>
+          <textarea id="descricao-defesa"
+            placeholder="Detalhe a gravidade, os bairros atingidos e como os itens arrecadados serão distribuídos aos desalojados."
+            required></textarea>
+        </div>
+
+        <div class="linha-campos">
+          <div class="campo">
+            <label for="ponto-coleta-defesa">Base / Ponto focal de coleta e triagem</label>
+            <input type="text" id="ponto-coleta-defesa" placeholder="Ex.: Ginásio Municipal de Esportes - Centro"
+              required>
+          </div>
+          <div class="campo">
+            <label for="dt-limite-defesa">Previsão de término / ciclo de socorro</label>
+            <input type="date" id="dt-limite-defesa" required>
+          </div>
+        </div>
+
+        <div class="botoes-direita">
+          <a href="defesa-painel.html" class="botao botao-secundario botao-pequeno">Cancelar</a>
+          <button type="submit" class="botao botao-pequeno">Publicar campanha emergencial</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/acesso.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/defesa.js"></script>
+</body>
+
+</html>

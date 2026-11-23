@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatórios Gerenciais | ConectaONG</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body data-perfil="admin">
+  <header class="cabecalho">
+    <div class="container">
+      <a href="admin-painel.html" class="logo"><img src="img/logo.png"
+          alt="Mão segurando um coração, símbolo do ConectaONG">ConectaONG</a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="admin-painel.html" class="ativo">Início</a>
+        <a href="admin-doacoes.html">Doações</a>
+        <a href="admin-configuracoes.html">Minha Conta</a>
+        <a href="index.html" id="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="titulo-pagina">Painel administrativo</h1>
+      <div class="admin">
+        <nav class="menu-lateral" aria-label="Menu do administrador">
+          <a href="admin-painel.html">Visão geral</a>
+          <a href="admin-ongs.html">Gerenciar ONGs</a>
+          <a href="admin-doacoes.html">Gerenciar doações</a>
+          <a href="admin-usuarios.html">Usuários</a>
+          <a href="admin-relatorios.html" class="ativo">Relatórios</a>
+          <a href="admin-configuracoes.html">Configurações</a>
+        </nav>
+        <div class="admin-conteudo">
+          <h2>Relatórios e Indicadores de Impacto</h2>
+          <p class="subtitulo-secao">Acompanhamento consolidado de arrecadações, campanhas e resposta a desastres.</p>
+
+          <section class="numeros" aria-label="Números consolidados">
+            <div class="numero"><span>Total arrecadado</span><strong>184 ton</strong></div>
+            <div class="numero"><span>Campanhas concluídas</span><strong>36</strong></div>
+            <div class="numero"><span>Eficiência de entrega</span><strong>94%</strong></div>
+            <div class="numero"><span>Cidades atendidas</span><strong>42</strong></div>
+          </section>
+
+          <section class="secao-media">
+            <h3>Balanço de Doações por Categoria</h3>
+            <div class="tabela-responsiva">
+              <table class="tabela-dados" aria-label="Doações por Categoria">
+                <thead>
+                  <tr>
+                    <th>Categoria</th>
+                    <th>Volume Arrecadado</th>
+                    <th>Metas Atingidas</th>
+                    <th>Status da Demanda</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Alimentos não perecíveis</strong></td>
+                    <td>82 toneladas</td>
+                    <td>91% da meta anual</td>
+                    <td><span class="selo selo-alta">Demanda Contínua</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Água Mineral Potável (Emergencial)</strong></td>
+                    <td>45.000 litros</td>
+                    <td>98% da meta emergencial</td>
+                    <td><span class="selo selo-concluida">Atendida</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Vestuário e Cobertores</strong></td>
+                    <td>24.300 peças</td>
+                    <td>86% da meta</td>
+                    <td><span class="selo selo-media">Estável</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kits de Higiene e Limpeza</strong></td>
+                    <td>14.800 unidades</td>
+                    <td>89% da meta</td>
+                    <td><span class="selo selo-alta">Alta procura</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Materiais Escolares</strong></td>
+                    <td>6.200 kits</td>
+                    <td>100% da meta do semestre</td>
+                    <td><span class="selo selo-concluida">Concluída</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="secao-media">
+            <h3>Distribuição Geográfica de Ajuda Humanitária</h3>
+            <div class="tabela-responsiva">
+              <table class="tabela-dados" aria-label="Distribuição Regional">
+                <thead>
+                  <tr>
+                    <th>Região</th>
+                    <th>ONGs Parceiras</th>
+                    <th>Campanhas Atendidas</th>
+                    <th>Famílias Beneficiadas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Região Sul</strong></td>
+                    <td>38 organizações</td>
+                    <td>14 campanhas de enchentes</td>
+                    <td>18.400 famílias</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Região Sudeste</strong></td>
+                    <td>47 organizações</td>
+                    <td>11 campanhas sociais e encostas</td>
+                    <td>22.100 famílias</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Região Nordeste</strong></td>
+                    <td>22 organizações</td>
+                    <td>8 campanhas de estiagem</td>
+                    <td>14.600 famílias</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Região Centro-Oeste e Norte</strong></td>
+                    <td>13 organizações</td>
+                    <td>3 campanhas florestais</td>
+                    <td>6.300 famílias</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <div class="botoes-direita espaco-topo">
+            <button type="button" class="botao botao-pequeno" onclick="window.print()">Imprimir relatório
+              consolidado</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/acesso.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuários | ConectaONG</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body data-perfil="admin">
+  <header class="cabecalho">
+    <div class="container">
+      <a href="admin-painel.html" class="logo"><img src="img/logo.png"
+          alt="Mão segurando um coração, símbolo do ConectaONG">ConectaONG</a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="admin-painel.html" class="ativo">Início</a>
+        <a href="admin-doacoes.html">Doações</a>
+        <a href="admin-configuracoes.html">Minha Conta</a>
+        <a href="index.html" id="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="titulo-pagina">Painel administrativo</h1>
+      <div class="admin">
+        <nav class="menu-lateral" aria-label="Menu do administrador">
+          <a href="admin-painel.html">Visão geral</a>
+          <a href="admin-ongs.html">Gerenciar ONGs</a>
+          <a href="admin-doacoes.html">Gerenciar doações</a>
+          <a href="admin-usuarios.html" class="ativo">Usuários</a>
+          <a href="admin-relatorios.html">Relatórios</a>
+          <a href="admin-configuracoes.html">Configurações</a>
+        </nav>
+        <div class="admin-conteudo">
+          <div class="cabeca-secao">
+            <h2>Usuários do Sistema</h2>
+            <button type="button" class="botao botao-pequeno" id="botao-adicionar-usuario">Cadastrar novo usuário</button>
+          </div>
+
+          <form class="cartao" id="formulario-usuario" style="display: none; margin-bottom: 24px;">
+            <h3 id="titulo-formulario-usuario">Editar usuário</h3>
+            <div class="linha-campos">
+              <div class="campo">
+                <label for="usuario-nome">Nome ou Razão Social</label>
+                <input type="text" id="usuario-nome" placeholder="Nome completo" required>
+              </div>
+              <div class="campo">
+                <label for="usuario-email">E-mail</label>
+                <input type="email" id="usuario-email" placeholder="email@exemplo.com" required>
+              </div>
+            </div>
+            <div class="linha-campos">
+              <div class="campo">
+                <label for="usuario-perfil-edit">Perfil de acesso</label>
+                <select id="usuario-perfil-edit" required>
+                  <option value="Doador">Doador</option>
+                  <option value="ONG">ONG</option>
+                  <option value="Defesa Civil">Defesa Civil</option>
+                  <option value="Administrador">Administrador</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="usuario-status-edit">Situação da conta</label>
+                <select id="usuario-status-edit" required>
+                  <option value="Ativo">Ativo</option>
+                  <option value="Desativado">Desativado</option>
+                  <option value="Pendente">E-mail não confirmado</option>
+                </select>
+              </div>
+            </div>
+            <div class="botoes-direita">
+              <button type="button" class="botao botao-secundario botao-pequeno" id="botao-cancelar-usuario">Cancelar</button>
+              <button type="submit" class="botao botao-pequeno">Salvar alterações</button>
+            </div>
+          </form>
+
+          <form class="painel-cinza filtros" id="form-busca-usuarios">
+            <div class="campo">
+              <label for="buscar-usuario">Buscar usuário</label>
+              <input type="text" id="buscar-usuario" placeholder="Nome ou e-mail">
+            </div>
+            <div class="campo">
+              <label for="perfil-usuario">Perfil</label>
+              <select id="perfil-usuario">
+                <option>Todos</option>
+                <option>Doador</option>
+                <option>ONG</option>
+                <option>Defesa Civil</option>
+                <option>Administrador</option>
+              </select>
+            </div>
+            <button type="submit" class="botao botao-pequeno">Buscar</button>
+          </form>
+
+          <div class="lista" id="lista-usuarios-admin">
+            <article class="linha">
+              <div class="linha-info">
+                <h3>Coordenação Regional de Proteção e Defesa Civil</h3>
+                <p>defesacivil@defesacivil.gov.br · Defesa Civil · Cadastro em 15/08/2026</p>
+              </div>
+              <div class="linha-acoes">
+                <span class="selo selo-concluida">Ativo</span>
+                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
+                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
+              </div>
+            </article>
+            <article class="linha">
+              <div class="linha-info">
+                <h3>João Silva</h3>
+                <p>joao.silva@email.com · Doador · Cadastro em 02/06/2026</p>
+              </div>
+              <div class="linha-acoes">
+                <span class="selo selo-concluida">Ativo</span>
+                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
+                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
+              </div>
+            </article>
+            <article class="linha">
+              <div class="linha-info">
+                <h3>Maria Oliveira</h3>
+                <p>maria.oliveira@email.com · Doadora · Cadastro em 14/07/2026</p>
+              </div>
+              <div class="linha-acoes">
+                <span class="selo selo-concluida">Ativo</span>
+                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
+                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
+              </div>
+            </article>
+            <article class="linha">
+              <div class="linha-info">
+                <h3>Equipe ONG Mãos Solidárias</h3>
+                <p>contato@maossolidarias.org.br · ONG · Cadastro em 03/08/2026</p>
+              </div>
+              <div class="linha-acoes">
+                <span class="selo selo-concluida">Ativo</span>
+                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
+                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
+              </div>
+            </article>
+            <article class="linha">
+              <div class="linha-info">
+                <h3>Carlos Pereira</h3>
+                <p>carlos.pereira@email.com · Doador · Cadastro em 09/10/2026</p>
+              </div>
+              <div class="linha-acoes">
+                <span class="selo selo-pendente">E-mail não confirmado</span>
+                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
+                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/acesso.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/admin-usuarios.js"></script>
+</body>
+
+</html>

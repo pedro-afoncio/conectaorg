@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alertas e Risco por Região | Defesa Civil</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body data-perfil="defesacivil">
+  <header class="cabecalho">
+    <div class="container">
+      <a href="defesa-painel.html" class="logo"><img src="img/logo.png"
+          alt="Mão segurando um coração, símbolo do ConectaONG">ConectaONG</a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="defesa-painel.html">Situação Regional</a>
+        <a href="defesa-campanha.html">Campanhas de Emergência</a>
+        <a href="defesa-alertas.html" class="ativo">Alertas de Risco</a>
+        <a href="index.html" id="sair">Sair</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="titulo-pagina">Alertas Meteorológicos e Gestão de Risco</h1>
+      <p class="subtitulo-secao">Emissão de alertas oficiais para orientação comunitária e mobilização prévia de
+        donativos.</p>
+
+      <section class="cartao secao-pequena">
+        <h2>Emitir novo alerta oficial</h2>
+        <form id="formulario-alerta" class="secao-pequena">
+          <div class="linha-campos">
+            <div class="campo">
+              <label for="alerta-regiao">Região ou município</label>
+              <input type="text" id="alerta-regiao" placeholder="Ex.: Serra Gaúcha, RS" required>
+            </div>
+            <div class="campo">
+              <label for="alerta-tipo">Tipo de ocorrência</label>
+              <select id="alerta-tipo" required>
+                <option value="Chuva Intensa e Enxurrada">Chuva Intensa e Enxurrada</option>
+                <option value="Risco de Deslizamento">Risco de Deslizamento</option>
+                <option value="Vendaval e Granizo">Vendaval e Granizo</option>
+                <option value="Onda de Calor e Seca">Onda de Calor e Seca</option>
+                <option value="Incêndio Florestal">Incêndio Florestal</option>
+              </select>
+            </div>
+          </div>
+          <div class="linha-campos">
+            <div class="campo">
+              <label for="alerta-nivel">Classificação de risco</label>
+              <select id="alerta-nivel" required>
+                <option value="vermelho">Alerta Máximo (Vermelho)</option>
+                <option value="laranja">Alerta Alto (Laranja)</option>
+                <option value="amarelo">Atenção (Amarelo)</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="alerta-familias">Estimativa de famílias afetadas</label>
+              <input type="number" id="alerta-familias" min="1" placeholder="Ex.: 500" required>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="alerta-medida">Medidas de proteção e orientação</label>
+            <textarea id="alerta-medida"
+              placeholder="Instruções para a população e rotas de acolhimento nos pontos de apoio." required></textarea>
+          </div>
+          <div class="botoes-direita">
+            <button type="submit" class="botao botao-pequeno">Publicar alerta regional</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="secao-media">
+        <h2>Alertas Ativos no Sistema</h2>
+        <div class="lista" id="lista-alertas-ativos"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="rodape">
+    <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
+  </footer>
+  <script src="js/acesso.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/defesa.js"></script>
+</body>
+
+</html>
