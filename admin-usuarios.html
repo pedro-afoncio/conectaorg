@@ -45,7 +45,7 @@
             <button type="button" class="botao botao-pequeno" id="botao-adicionar-usuario">Cadastrar novo usuário</button>
           </div>
 
-          <form class="cartao" id="formulario-usuario" style="display: none; margin-bottom: 24px;">
+          <form class="cartao formulario-necessidade" id="formulario-usuario">
             <h3 id="titulo-formulario-usuario">Editar usuário</h3>
             <div class="linha-campos">
               <div class="campo">
@@ -100,63 +100,7 @@
             <button type="submit" class="botao botao-pequeno">Buscar</button>
           </form>
 
-          <div class="lista" id="lista-usuarios-admin">
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Coordenação Regional de Proteção e Defesa Civil</h3>
-                <p>defesacivil@defesacivil.gov.br · Defesa Civil · Cadastro em 15/08/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Ativo</span>
-                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
-                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>João Silva</h3>
-                <p>joao.silva@email.com · Doador · Cadastro em 02/06/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Ativo</span>
-                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
-                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Maria Oliveira</h3>
-                <p>maria.oliveira@email.com · Doadora · Cadastro em 14/07/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Ativo</span>
-                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
-                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Equipe ONG Mãos Solidárias</h3>
-                <p>contato@maossolidarias.org.br · ONG · Cadastro em 03/08/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Ativo</span>
-                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
-                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Carlos Pereira</h3>
-                <p>carlos.pereira@email.com · Doador · Cadastro em 09/10/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-pendente">E-mail não confirmado</span>
-                <button type="button" class="botao botao-secundario botao-pequeno">Editar</button>
-                <button type="button" class="botao botao-perigo botao-pequeno">Desativar</button>
-              </div>
-            </article>
-          </div>
+          <div class="lista" id="lista-usuarios-admin"></div>
         </div>
       </div>
     </div>
@@ -164,9 +108,9 @@
   <footer class="rodape">
     <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
   </footer>
-  <script src="js/acesso.js"></script>
   <script src="js/dados.js"></script>
-  <script src="js/admin-usuarios.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/admin.js"></script>
 </body>
 
 </html>

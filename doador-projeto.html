@@ -48,35 +48,11 @@
         </section>
         <section>
           <h2 class="titulo-necessidades">Necessidades atuais</h2>
-          <div id="bloco-necessidades-projeto">
-            <div class="painel-cinza necessidade">
-              <h3>Alimentos não perecíveis</h3>
-              <ul>
-                <li>• Arroz (50 kg)</li>
-                <li>• Feijão (30 kg)</li>
-                <li>• Óleo (20 litros)</li>
-              </ul>
-            </div>
-            <div class="painel-cinza necessidade">
-              <h3>Material escolar</h3>
-              <ul>
-                <li>• Cadernos (100 unidades)</li>
-                <li>• Lápis (200 unidades)</li>
-                <li>• Mochilas (50 unidades)</li>
-              </ul>
-            </div>
-            <div class="painel-cinza necessidade">
-              <h3>Higiene pessoal</h3>
-              <ul>
-                <li>• Sabonetes (150 unidades)</li>
-                <li>• Creme dental (100 unidades)</li>
-              </ul>
-            </div>
-          </div>
+          <div id="bloco-necessidades-projeto"></div>
           <div class="como-doar">
             <h2>Como doar</h2>
-            <p>Você pode doar os itens listados acima em um dos nossos pontos de coleta.</p>
-            <a href="doador-finalizar.html" class="botao">Doar itens físicos</a>
+            <p>Marque os itens que você quer doar e entregue em um dos nossos pontos de coleta.</p>
+            <button type="button" class="botao" onclick="escolherItens()">Doar itens marcados</button>
           </div>
         </section>
       </div>
@@ -94,10 +70,9 @@
   <footer class="rodape">
     <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
   </footer>
-  <script src="js/acesso.js"></script>
   <script src="js/dados.js"></script>
-  <script src="js/prazo.js"></script>
-  <script src="js/doador-projeto.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/doador.js"></script>
 </body>
 
 </html>
