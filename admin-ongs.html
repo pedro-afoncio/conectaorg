@@ -62,42 +62,10 @@
             <button type="submit" class="botao botao-pequeno">Buscar</button>
           </form>
 
-          <div class="lista" id="lista-ongs-admin">
-            <article class="linha">
-              <div class="linha-info">
-                <h3>ONG Esperança</h3>
-                <p>CNPJ 12.345.678/0001-90 · Recife, PE · Cadastro enviado em 20/10/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-pendente">Aguardando aprovação</span>
-                <button type="button" class="botao botao-pequeno botao-aprovar">Aprovar</button>
-                <button type="button" class="botao botao-perigo botao-pequeno botao-recusar">Recusar</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>ONG Amigos do Bem</h3>
-                <p>CNPJ 98.765.432/0001-10 · São Paulo, SP · Aprovada em 12/09/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Aprovada</span>
-                <a href="doador-projeto.html" class="botao botao-secundario botao-pequeno">Ver perfil</a>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>ONG Mãos Solidárias</h3>
-                <p>CNPJ 45.678.912/0001-33 · Curitiba, PR · Aprovada em 03/08/2026</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Aprovada</span>
-                <a href="doador-projeto.html" class="botao botao-secundario botao-pequeno">Ver perfil</a>
-              </div>
-            </article>
-          </div>
+          <div class="lista" id="lista-ongs-admin"></div>
 
           <section class="secao-media">
-            <h3>Moderação e Aprovação de Campanhas</h3>
+            <h3>Moderação e Aprovação de Campanhas</h3> <br>
             <p class="subtitulo-secao">Aprovação prévia de campanhas de arrecadação comunitárias e emergenciais.</p>
             <div class="lista" id="lista-campanhas-moderar">
               <article class="linha">
@@ -107,18 +75,19 @@
                 </div>
                 <div class="linha-acoes">
                   <span class="selo selo-concluida">Ativa e Aprovada</span>
-                  <button type="button" class="botao botao-secundario botao-pequeno" onclick="verDetalhesCampanhaAdmin('SOS Enchentes Vale do Taquari', 'Defesa Civil', 'Vale do Taquari, RS', '5.000 kits', 'Atendimento emergencial a 1.800 famílias desabrigadas por inundações.')">Detalhes</button>
                 </div>
               </article>
-              <article class="linha">
+              <article class="linha" id="campanha-pendente">
                 <div class="linha-info">
                   <h3>Campanha de Inverno e Agasalhos 2026</h3>
                   <p>Órgão / Entidade: ONG Mãos Solidárias · Tipo: Comunitária · Meta: 1.200 peças</p>
                 </div>
                 <div class="linha-acoes">
-                  <span class="selo selo-pendente">Aguardando moderação</span>
-                  <button type="button" class="botao botao-pequeno botao-aprovar">Aprovar</button>
-                  <button type="button" class="botao botao-perigo botao-pequeno botao-recusar">Rejeitar</button>
+                  <span class="selo selo-pendente" id="selo-campanha-pendente">Aguardando moderação</span>
+                  <span class="linha-acoes" id="botoes-campanha-pendente">
+                    <button type="button" class="botao botao-pequeno" onclick="aprovarCampanha()">Aprovar</button>
+                    <button type="button" class="botao botao-perigo botao-pequeno" onclick="recusarCampanha()">Rejeitar</button>
+                  </span>
                 </div>
               </article>
             </div>
@@ -130,9 +99,9 @@
   <footer class="rodape">
     <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
   </footer>
-  <script src="js/acesso.js"></script>
   <script src="js/dados.js"></script>
-  <script src="js/aprovacao.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/admin.js"></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@
       <div class="perfil">
         <section class="cartao perfil-dados">
           <h2>Informações do doador</h2>
-          <form class="form-aviso" data-mensagem="Perfil atualizado com sucesso!">
+          <form onsubmit="return avisar('Perfil atualizado com sucesso!')">
             <div class="campo">
               <label for="nome">Nome completo</label>
               <input type="text" id="nome" value="João Silva" required>
@@ -58,19 +58,7 @@
           </section>
 
           <h3 class="titulo-lista" id="doacoes">Resumo e acompanhamento das doações</h3>
-          <div class="lista" id="lista-doacoes-doador">
-            <article class="linha linha-coluna">
-              <h4>Doação para ONG Esperança · 10/10/2026</h4>
-              <p>Itens: alimentos, roupas, brinquedos</p>
-              <p>Status: <span class="selo selo-concluida">Entregue</span></p>
-            </article>
-            <article class="linha linha-coluna">
-              <h4>Doação para o Projeto Futuro · 05/09/2026</h4>
-              <p>Itens: livros, cadernos e lápis</p>
-              <p>Status: <span class="selo selo-concluida">Entregue</span></p>
-            </article>
-          </div>
-          <p class="espaco-topo"><button type="button" class="botao botao-secundario botao-pequeno" id="botao-historico-completo" onclick="expandirHistoricoCompleto()">Ver histórico completo</button></p>
+          <div class="lista" id="lista-doacoes-doador"></div>
         </section>
       </div>
 
@@ -105,10 +93,9 @@
   <footer class="rodape">
     <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
   </footer>
-  <script src="js/acesso.js"></script>
   <script src="js/dados.js"></script>
-  <script src="js/doador-historico.js"></script>
-  <script src="js/aviso.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/doador.js"></script>
 </body>
 
 </html>

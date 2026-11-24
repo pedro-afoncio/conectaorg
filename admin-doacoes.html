@@ -61,53 +61,12 @@
               <select id="filtro-status">
                 <option value="Todos">Todos</option>
                 <option value="Pendente">Pendente</option>
-                <option value="Concluída">Concluída</option>
+                <option value="Recebida">Concluída</option>
               </select>
             </div>
             <button type="button" class="botao botao-pequeno" id="botao-aplicar-filtros-admin">Aplicar filtros</button>
           </form>
-          <div class="lista" id="lista-doacoes-admin">
-            <article class="linha">
-              <div class="linha-info">
-                <h3>João Silva → ONG Amigos do Bem</h3>
-                <p>Alimentos (10 kg), brinquedos (5 unidades) · 20/10/2026 14:30</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-pendente">Pendente</span>
-                <button type="button" class="botao botao-secundario botao-pequeno" onclick="auditarDoacao(1)">Ver detalhes</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Maria Oliveira → ONG Esperança</h3>
-                <p>Roupas (15 peças) · 19/10/2026 10:00</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-pendente">Pendente</span>
-                <button type="button" class="botao botao-secundario botao-pequeno" onclick="auditarDoacao(2)">Ver detalhes</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Pedro Souza → ONG Mãos Solidárias</h3>
-                <p>Materiais escolares (20 kits) · 18/10/2026 08:40</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Concluída</span>
-                <button type="button" class="botao botao-secundario botao-pequeno" onclick="auditarDoacao(3)">Ver detalhes</button>
-              </div>
-            </article>
-            <article class="linha">
-              <div class="linha-info">
-                <h3>Ana Costa → ONG Verde Vida</h3>
-                <p>Mudas e ferramentas (20 itens) · 15/10/2026 11:20</p>
-              </div>
-              <div class="linha-acoes">
-                <span class="selo selo-concluida">Concluída</span>
-                <button type="button" class="botao botao-secundario botao-pequeno" onclick="auditarDoacao(4)">Ver detalhes</button>
-              </div>
-            </article>
-          </div>
+          <div class="lista" id="lista-doacoes-admin"></div>
         </div>
       </div>
     </div>
@@ -115,9 +74,9 @@
   <footer class="rodape">
     <p>&copy; 2026 ConectaONG. Todos os direitos reservados.</p>
   </footer>
-  <script src="js/acesso.js"></script>
   <script src="js/dados.js"></script>
-  <script src="js/admin-doacoes.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/admin.js"></script>
 </body>
 
 </html>

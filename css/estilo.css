@@ -552,10 +552,6 @@ h4 {
   flex: 1;
 }
 
-.busca-cinza {
-  background-color: var(--neutro-100);
-  border: none;
-}
 
 .mensagem-vazia {
   display: none;
@@ -850,9 +846,6 @@ h4 {
   line-height: 36px;
 }
 
-.painel-numeros {
-  margin-top: 0;
-}
 
 .editar-perfil {
   display: flex;
@@ -1188,9 +1181,15 @@ h4 {
   background-color: var(--neutro-100);
 }
 
-.grade-quatro {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+.escolha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
+.escolha input {
+  width: 20px;
+  height: 20px;
+}
